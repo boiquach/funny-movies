@@ -7,7 +7,8 @@
         = link_to "Log in", new_session_path(User)
         = link_to "Sign up", new_registration_path(User)
 
-
+- flash.each do |type, msg|
+    %div= msg
 .movies-container
     - @movies.each do |movie|
         .movie
