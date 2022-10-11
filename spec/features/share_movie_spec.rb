@@ -35,7 +35,7 @@ RSpec.describe 'Sharing a Movie', type: :feature do
   scenario 'input is a video link but video is not available' do
     visit movies_path
     click_on 'Share'
-    fill_in 'Youtube URL', with: 'http://vimeo.com/898029'
+    fill_in 'Youtube URL', with: 'https://www.youtube.com/watch?v=N-xcYytDaIc'
     click_on 'Share'
     expect(page).to have_content('Please provide an available video.')
   end
