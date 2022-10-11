@@ -1,0 +1,8 @@
+%h1 Share a Youtube movie
+- flash.each do |type, msg|
+    %div= msg
+
+= form_with url: movies_path, method: :post do |f|
+    = f.label :link, 'Youtube URL'
+    = f.text_field :link
+    = f.submit 'Share'
